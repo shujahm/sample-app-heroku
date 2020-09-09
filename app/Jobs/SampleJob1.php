@@ -37,6 +37,7 @@ class SampleJob1 implements ShouldQueue
     {
         // code for processing
         Log::info("processing SampleJob2 Job");
-        SampleJob2::dispatch([12, 1212, 32, 43, 56, 7678]);
+        // Creating a large array of numbers to mimic the actual behavior
+        SampleJob2::dispatch(range(1,70000));
     }
 }

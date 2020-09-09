@@ -43,5 +43,9 @@ class SampleJob2 implements ShouldQueue
         // code for processing
         Log::info("processing SampleJob2 Job");
         Log::info("Size of Video IDs Array:" . count($this->videoIds));
+        // iterating over the array to show a long running process
+        foreach($this->videoIds as $id){
+            Log::info("Value being printed:" . $id);
+        }
     }
 }
